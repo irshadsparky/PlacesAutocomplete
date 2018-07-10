@@ -13,12 +13,9 @@ The `PlacesAutocompleteTextView` is available from the sonatype snapshots reposi
 Use the following in your `build.gradle`:
 
 ```groovy
-repositories {
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
-}
 
 dependencies {
-    compile 'com.seatgeek:placesautocomplete:0.3-SNAPSHOT'
+    compile 'com.irshad:placesautocomplete:SNAPSHOT'
 }
 ```
 
