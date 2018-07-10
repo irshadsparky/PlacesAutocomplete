@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion Integer.parseInt(TARGET_SDK_VERSION)
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(TARGET_SDK_VERSION)
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    api "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
+    api "com.android.support:design:${SUPPORT_LIBRARY_VERSION}"
+
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    compileOnly 'com.google.code.gson:gson:2.8.5'
+
+    testImplementation  'org.mockito:mockito-core:2.15.0'
+    testImplementation  'junit:junit:4.12'
+}
+
+
+
