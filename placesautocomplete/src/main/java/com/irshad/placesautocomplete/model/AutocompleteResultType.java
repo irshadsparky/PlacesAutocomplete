@@ -17,6 +17,10 @@ public enum AutocompleteResultType {
      */
     ESTABLISHMENT("establishment"),
     /**
+     * only citys results
+     */
+    CITY("(cities)"),
+    /**
      * Any location or establishment
      */
     NO_TYPE("no_type");
@@ -28,11 +32,12 @@ public enum AutocompleteResultType {
         this.queryParam = queryParam;
     }
 
-    public String getQueryParam() {
-        return queryParam;
-    }
-
     public static AutocompleteResultType fromEnum(int enumerated) {
         return AutocompleteResultType.values()[enumerated];
     }
+
+    public String getQueryParam() {
+        return queryParam;
+    }
 }
+
